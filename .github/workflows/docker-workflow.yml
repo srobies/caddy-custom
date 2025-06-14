@@ -43,6 +43,10 @@ jobs:
     name: Build and publish the image
     runs-on: ubuntu-latest
     needs: metadata
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
 
     steps:
       - name: Check repository
